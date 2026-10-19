@@ -78,13 +78,11 @@
   .icon svg { width: 22px; height: 22px; }
   .link strong { display: block; font-size: 16px; font-weight: 600; }
   .link span { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
-  .soon {
+  .featured {
     position: relative; overflow: hidden;
     border-color: rgba(255, 196, 80, 0.35);
-    cursor: default;
   }
-  .soon:hover { transform: none; }
-  .soon::after {
+  .featured::after {
     content: ""; position: absolute; inset: 0;
     background: linear-gradient(110deg, transparent 30%, rgba(255, 196, 80, 0.12) 50%, transparent 70%);
     animation: shine 3.2s ease-in-out infinite;
@@ -96,7 +94,7 @@
   footer { margin-top: 36px; color: var(--muted); font-size: 12px; }
   footer a { color: var(--muted); }
   @media (prefers-reduced-motion: reduce) {
-    .logo, .soon::after { animation: none; }
+    .logo, .featured::after { animation: none; }
   }
 </style>
 </head>
@@ -108,12 +106,10 @@
   <div class="stripe" aria-hidden="true"></div>
 
   <nav class="links">
-    <div class="link soon">
-      <div class="icon" style="background: rgba(255, 196, 80, 0.16); color: var(--gold);">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2z"/></svg>
-      </div>
-      <div><strong data-en="Our first game is coming soon">İlk oyunumuz çok yakında</strong><span data-en="On Google Play">Google Play'de</span></div>
-    </div>
+    <a class="link featured" href="https://play.google.com/store/apps/details?id=com.mussiworks.murmura" target="_blank" rel="noopener">
+      <img class="icon" src="murmura/icon.png" alt="" width="40" height="40">
+      <div><strong>Murmura</strong><span data-en="Lead the flock · Get it on Google Play">Sürüyü yönet · Google Play'de ücretsiz</span></div>
+    </a>
 
     <a class="link" href="https://www.instagram.com/mussiworks/" target="_blank" rel="noopener">
       <div class="icon" style="background: rgba(236, 88, 96, 0.16); color: var(--coral);">
